@@ -10,7 +10,8 @@
 
 本项目只支持windows
 
-本项目不提供字体文件和安安图片, 需要你自己想办法加进来, 分别命名为`font.ttf`和`base.png`.
+本项目不提供字体文件和安安图片, 需要你自己想办法加进来, 分别命名为`font.ttf`, `base.png`和`base_overlay.png`.
+其中`font.ttf`为字体文件, `base.png`为安安拿素描本的照片, `base_overlay.png`为透明底的安安袖子, 用于防止文字和图片覆盖在袖子上方.
 如果分辨率不一样的安安图片, 需要修改`config.py`的 `TEXT_BOX_TOPLEFT` 和 `IMAGE_BOX_BOTTOMRIGHT`, 定义文本框的大小.
 
 依赖库安装: `pip install -r requirements.txt `
