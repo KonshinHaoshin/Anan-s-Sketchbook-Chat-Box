@@ -44,8 +44,8 @@ python官方下载地址：https://www.python.org/downloads/
 确保此时cmd显示的路径是你之前解压的路径, 输入 ```pip install -r requirements.txt```  
 此操作会自动安装所有依赖库
 
-### 直接下载exe文件 未完成
-1. 点击下载 [Anan-s-Sketchbook-Chat-Box.exe](https://github.com/HZBJZB1234/Anan-s-Sketchbook-Chat-Box-re/releases/download/v1.0.0/Anan-s-Sketchbook-Chat-Box.exe)  
+### 直接下载exe文件
+1. 点击下载 [main.exe](https://github.com/HZBHZB1234/Anan-s-Sketchbook-Chat-Box-re/releases/tag/v1.0.0)  
 可使用 https://github.akams.cn/ 加速下载 
 ### 使用git进行部署的方法此处不再赘述
 
