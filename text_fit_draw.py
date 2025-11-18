@@ -543,7 +543,18 @@ def draw_text_auto(
                     font_segments = parse_text_segments_with_font(seg_text, emoji_font, font)
                     for font_seg_text, font_seg_font in font_segments:
                         if font_seg_text:
-                            draw.text((x, y), font_seg_text, font=font_seg_font, fill=seg_color)
+                            # 检查是否是emoji字符，如果是则启用彩色渲染
+                            is_emoji_seg = _is_emoji(font_seg_text[0]) if font_seg_text else False
+                            if is_emoji_seg:
+                                # 对于emoji，使用embedded_color=True以支持彩色渲染
+                                try:
+                                    draw.text((x, y), font_seg_text, font=font_seg_font, embedded_color=True)
+                                except TypeError:
+                                    # 如果PIL版本不支持embedded_color，回退到普通方式
+                                    draw.text((x, y), font_seg_text, font=font_seg_font, fill=seg_color)
+                            else:
+                                # 非emoji字符使用指定颜色
+                                draw.text((x, y), font_seg_text, font=font_seg_font, fill=seg_color)
                             x += int(draw.textlength(font_seg_text, font=font_seg_font))
                 else:
                     # 没有emoji字体，使用普通字体
